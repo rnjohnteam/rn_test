@@ -26,9 +26,9 @@ var Main = React.createClass({
         return (
             <TabNavigator tabBarStyle={styles.tabBarStyle}>
                 {/* --首页-- */}
-                {this.renderTabNavigatorItem('首页','account-balance','account-balance','home', '首页', Home)}
+                {this.renderTabNavigatorItem('首页12345','account-balance','account-balance','home', '首页', Home)}
                 {/* --商家-- */}
-                {this.renderTabNavigatorItem('商家','store','store','shop', '商家', Shop)}
+                {this.renderTabNavigatorItem('商家11234','store','store','shop', '商家', Shop)}
                 {/* --我的-- */}
                 {this.renderTabNavigatorItem('我的','account-circle','account-circle','mine', '我的', Mine)}
                 {/* --更多-- */}
@@ -45,7 +45,9 @@ var Main = React.createClass({
                 title={title}
                 renderIcon={() => <VectorIcon name={iconName} size={25} color={'gray'}></VectorIcon>}
                 renderSelectedIcon={() => <VectorIcon name={selectedIconName} size={25} color={'orange'}></VectorIcon>}
-                onPress={() => { this.setState({ selectedTab: selectedTab }) }}
+                onPress={() => { this.setState((Object.assign({}, this.state, {
+                    dataArray: newlist
+                })))}}
                 selected={this.state.selectedTab === selectedTab}
                 titleStyle={styles.titleStyle}
                 selectedTitleStyle={styles.selectedStyle}

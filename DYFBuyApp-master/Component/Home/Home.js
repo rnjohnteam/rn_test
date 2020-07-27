@@ -78,7 +78,7 @@ export default class Home extends Component {
                         <VectorIcon name='notifications-none' size={25} color={'gray'}></VectorIcon>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => { alert('点击扫一扫！') }}>
+                    <TouchableOpacity onPress={() => { alert('点击扫一扫111111！') }}>
                         <VectorIcon name='fullscreen' size={25} color={'gray'}></VectorIcon>
                     </TouchableOpacity>
 
